@@ -1,0 +1,231 @@
+/* Browser Compatibility: Tested on Chrome v112, macOS 13 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #2215d4;
+    color: #fff;
+    text-align: left; 
+    padding: 1rem;
+}
+
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+
+.profile-photo {
+    max-width: 40%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.text-content {
+    flex: 1;
+    text-align: justify;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px; 
+    height: 100vh; 
+    background-color: #2215d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    overflow-y: auto; 
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #66caee;
+}
+
+
+main {
+    margin-right: 220px; 
+    padding: 20px;
+    min-height: 80vh;
+    text-align: justify; 
+}
+
+
+.profile-photo {
+    max-width: 550px; 
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.interest-item {
+    background-color: #dfeef7;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px); 
+}
+
+
+.interest-item img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.interest-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #2215d4;
+}
+
+
+.interest-item p {
+    font-size: 0.9em;
+    color: #333;
+    padding: 5px;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px; 
+    aspect-ratio: 16 / 9; 
+    margin: 20px auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+
+footer {
+    margin-right: 220px; 
+    padding: 10px 20px;
+    background-color: #2215d4;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: calc(100% - 220px); 
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+/* rearrage nav item*/
+    nav ul {
+        flex-direction: row;
+    }
+
+    main, footer {
+        text-align: center;
+        flex-direction: column;
+        margin-right: 0; 
+        width: 100%;
+    }
+
+   
+    .main-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .text-content {
+        flex-direction: column;
+        text-align: center;
+        width: 90%; 
+    }
+
+        .interests-grid {
+            grid-template-columns: 1fr;
+        }
+/* reorder nav list item for mobile view  */
+       nav {
+            order: -1;
+        }
+ 
+            .video-container {
+                max-width: 90%; 
+            }
+        }
+        
+
+
